@@ -12,11 +12,21 @@ public class CohortTest {
     @Before
     public void setUp(){
         azeban.addStudent(milo);
+        milo.addGrade(90);
+        milo.addGrade(85);
+        milo.addGrade(70);
     }
     @Test
     public void listTest(){
-        assertNotNull(azeban.getStudents());
+        assertNotNull(azeban);
     }
     @Test
-    public void
+    public void currentList(){
+        assertNotNull(azeban.getStudents());
+    }
+
+    @Test
+    public void testAverageGrade(){
+        assertEquals(81, azeban.getCohortAverage(), 1);
+    }
 }
