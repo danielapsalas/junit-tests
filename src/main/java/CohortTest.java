@@ -1,16 +1,14 @@
 import org.junit.Before;
 import org.junit.Test;
-
-import java.security.PublicKey;
-import java.util.ArrayList;
-
 import static org.junit.Assert.*;
+
 public class CohortTest {
-    Cohort azeban = new Cohort();
+    Cohort azeban;
     Student milo = new Student(123, "milo");
 
     @Before
     public void setUp(){
+        this.azeban = new Cohort();
         azeban.addStudent(milo);
         milo.addGrade(90);
         milo.addGrade(85);
@@ -19,10 +17,14 @@ public class CohortTest {
     @Test
     public void listTest(){
         assertNotNull(azeban);
+        Student bryan = new Student(324, "bryan");
+        this.azeban.addStudent(bryan);
+        assertEquals(2, azeban.getStudents().size());
     }
     @Test
     public void currentList(){
         assertNotNull(azeban.getStudents());
+        assertEquals("milo", azeban.getStudents().get(0).getName());
     }
 
     @Test

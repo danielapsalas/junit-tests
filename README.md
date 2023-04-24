@@ -46,7 +46,8 @@ _At the end of the exercise you will end up with a `Student.java` and a `Student
 
 Once you are done with the `Student.java` class.
  
-1. Checkout to the `cohorts-feature` branch, there you will find a `Cohort.java` class inside the `src/main/java` folder, this class has already a lot of methods to calculate the cohort average grade and add a student. Let's go ahead and make sure there's sufficient tests for this class to be deployed to production:
+1. Checkout to the `cohorts-feature` branc
+2. h, there you will find a `Cohort.java` class inside the `src/main/java` folder, this class has already a lot of methods to calculate the cohort average grade and add a student. Let's go ahead and make sure there's sufficient tests for this class to be deployed to production:
 
 1. Start by creating a new branch called: `cohorts-tests`.
 1. Then create a `CohortTest` class and build a test for each of the following requirements:
